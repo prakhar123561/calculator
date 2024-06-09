@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Calculator -- Using HTML/JS</title>
+        <link rel="stylesheet" href="calculator.css">
+        <script src="calculator.js"></script>
+    </head>
+    <body>
+       
+        <MARquee style="color: #8AB4F8;">Calculator based on HTML, CSS and JAVASCRIPT</MARquee>
+
+        <div class="container">
+            <div class="calculator">
+                <form>
+                <div class="answer"><input type="text" id="answer" name="answer" style="color: #fff;" class="ans" placeholder="0" ></div>
+                <div>
+                    <div>
+                        <input type="button" value="&#x213C" class="operator" onclick="answer.value = '3.14159265359' ">
+                        <input type="button" value="e" class="operator" onclick="answer.value = '2.718281828' ">
+                        <input type="button" value="&#x221A" class="operator" onclick="answer.value = Math.sqrt(answer.value,2) ">
+                        <input type="button" value="x!" class="operator" onclick="fact()">
+                    </div>
+                </div>
+                <div>
+                    <input type="button" value="sin" class="operator" onclick="answer.value = Math.sin(answer.value) ">
+                    <input type="button" value="cos" class="operator" onclick="answer.value = Math.cos(answer.value) ">
+                    <input type="button" value="tan" class="operator" onclick="answer.value = Math.tan(answer.value) ">
+                    <input type="button" value="log" class="operator" onclick="answer.value = Math.log10(answer.value) ">
+                </div>
+                <div>
+                    <input type="button" value="AC" class="operator" style="background: #33cc33;" onclick="answer.value = '' ">
+                    <input type="button" value="DE" class="operator" style="background: #ff3399;" onclick="answer.value = answer.value.toString().slice(0,-1)">
+                    <input type="button" value="." class="operator" onclick="answer.value += '.' ">
+                    <input type="button" value="+" class="operator" onclick="answer.value += '+' ">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="answer.value += '7' ">
+                    <input type="button" value="8" onclick="answer.value += '8' ">
+                    <input type="button" value="9" onclick="answer.value += '9' ">
+                    <input type="button" value="/" class="operator" onclick="answer.value += '/' ">    
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="answer.value += '4' ">
+                    <input type="button" value="5" onclick="answer.value += '5' ">
+                    <input type="button" value="6" onclick="answer.value += '6' ">
+                    <input type="button" value="*" class="operator" onclick="answer.value += '*' ">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="answer.value += '1' ">
+                    <input type="button" value="2" onclick="answer.value += '2' ">
+                    <input type="button" value="3" onclick="answer.value += '3' ">
+                    <input type="button" value="-" class="operator" onclick="answer.value += '-' ">    
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="answer.value += '0' ">
+                    <input type="button" value="00" onclick="answer.value += '00' ">
+                    <input type="button" value="=" class="equal operator" onclick="answer.value = eval(answer.value)">    
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </body>
+    </html>
+   
+
+
+    <!-- <table border="0" cellspacing="0" cellpadding="5">
+        <tr><td><input type="text" id="answer"></td></tr>
+        <tr>
+            <td>
+                <input type="button" value="AC" onclick="answer.value = '' ">
+                <input type="button" value="DE" onclick="answer.value = answer.value.toString().slice(0,-1)">
+                <input type="button" value="." onclick="answer.value += '.' ">
+                <input type="button" value="+" onclick="answer.value += '+' ">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="answer.value += '7' ">
+                <input type="button" value="8" onclick="answer.value += '8' ">
+                <input type="button" value="9" onclick="answer.value += '9' ">
+                <input type="button" value="/" class="content" onclick="answer.value += '/' ">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="answer.value += '4' ">
+                <input type="button" value="5" onclick="answer.value += '5' ">
+                <input type="button" value="6" onclick="answer.value += '6' ">
+                <input type="button" value="*" class="content" onclick="answer.value += '*' ">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" onclick="answer.value += '1' ">
+                <input type="button" value="2" onclick="answer.value += '2' ">
+                <input type="button" value="3" onclick="answer.value += '3' ">
+                <input type="button" value="-" class="content" onclick="answer.value += '-' ">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" onclick="answer.value += '0' ">
+                <input type="button" value="00" onclick="answer.value += '00' ">
+                <input type="button" value="=" onclick="answer.value = eval(answer.value)">
+
+            </td>
+        </tr>
+
+    </table> -->
